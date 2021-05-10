@@ -1,0 +1,29 @@
+Titanic Data Setinde ;
+
+Cinsiyetleregore yolcu sayisini gormek icin hangi tur grafigi secersiniz?
+------Histogram Bar Chart
+
+Binis limanina gore yolcu yuzdelerini gormek icin hangi grafik turlerini secersiniz?
+------ Pie Chart
+
+Yas-cinsiyet grafiginde yas icin outlier lari gormek isterseniz hangi grafik turunu secersiniz?
+------ Box Plot
+
+https://www.kaggle.com/esratepebasi/notebookdac99e35a7
+
+copy and edit yaparak kodlari calistiriniz.
+
+Grafik 1 de degisiklikler yaparak sizde farkli pie chart lar deneyiniz. (erkek cocuk-kiz cocuk yolcularin grafigi,vb.)
+---- Done
+
+Grafik 2 nin kodlarindan yararlanarak pie chart ile gosterdiginiz grafikleri bar charta donusturunuz.
+---- Done
+
+Grafik 3,4 hangi grafik turune ornektir? Baska hangi titanic datasi degiskenleri icin bu grafik turunu kullanabiliriz,yorum yapiniz.
+---- Stack Bar Chart
+
+Grafik 5 hangi grafik turune ornektir?
+---- Box Plot 
+
+Grafik 6 ya gore ucret ile hayatta kalma arasindaki korelasyon kactir?
+----- 0.26
