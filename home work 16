@@ -1,0 +1,58 @@
+Class4-Statistics-Week16
+Titanic Data Setinde ;
+1.	Cinsiyetlere gore yolcu sayisini gormek icin hangi tur grafigi secersiniz?
+Yolcularin kadin, erkek dagilimini gosterecegi icin histogram bar chart kullanacagimiz gibi, bagimsiz datalar oldugu icin bar chart da kullanabiliriz.
+
+2.	Binis limanina gore yolcu yuzdelerini gormek icin hangi grafik turlerini secersiniz?
+Kategorik bagimsiz datalar oldugu ve eldeki veriyi ozetleme durumu oldugu icin bar chart kullanabiliriz.
+
+3.	Yas-cinsiyet grafiginde yas icin outlier lari gormek isterseniz hangi grafik turunu secersiniz?
+Outlier’lari gosteren grafik Box Plot’dur
+
+4.	Grafik 1 de degisiklikler yaparak sizde farkli pie chart lar deneyiniz. (erkek cocuk-kiz cocuk yolcularin grafigi,vb.)
+x = [len(male_kid_passenger), len(female_kid_passenger)]
+label = ['Male_Kids', 'Female_Kids']
+plt.pie(x, labels = label, autopct = '%1.01f%%')
+plt.title('Distribution of passengers by sex')
+plt.show()
+
+x = [len(male_kid_passenger), (len(adult_male_passenger)+len(adult_male_passenger))]
+label = ['Kids', 'Adults']
+plt.pie(x, labels = label, autopct = '%1.01f%%')
+plt.title('Distribution of kids and adults')
+plt.show()
+
+5.	Grafik 2 nin kodlarindan yararlanarak pie chart ile gosterdiginiz grafikleri bar charta donusturunuz.
+def kid_adult(x):
+    if x < 16:
+        return 'Kid'
+    elif x > 16:
+        return 'Adult'
+    else:
+        return 'Adult'
+    
+a= passenger_df['Age'].apply(kid_adult).value_counts()
+print(a)
+
+objects = ('Kid', 'Adult')
+y_pos = np.arange(len(objects))
+performance = [83,808]
+
+plt.bar(y_pos, performance, align='center', alpha=0.5)
+plt.xticks(y_pos, objects)
+plt.ylabel('Number')
+plt.title('Kids & Adults')
+plt.show()
+
+6.	Grafik 3,4 hangi grafik turune ornektir? Baska hangi titanic datasi degiskenleri icin bu grafik turunu kullanabiliriz,yorum yapiniz.
+Graph 3 and graph 4 are stacked bar chart. 
+We can also use it for 
+•	The passengers embarked from variuos towns
+•	Tickets by classes
+•	Survived by sex etc..
+
+7.	Grafik 5 hangi grafik turune ornektir?
+Box Plot
+8.	Grafik 6 ya gore ucret ile hayatta kalma arasindaki korelasyon kactir?
+np.corrcoef(passenger_df.Fare, passenger_df.Survived)[0][1]
+0.2573065223849624
